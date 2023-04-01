@@ -27,7 +27,7 @@ struct RouteCompleteView: View {
                             .frame(height: 48)
                             .foregroundColor(.white)
                             .cornerRadius(10)
-                        Link("Open in maps", destination: url!)
+                        Link("Navigate to station", destination: url!)
                             .bold()
                             .foregroundColor(backgroundColor)
                     }
