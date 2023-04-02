@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LocationDeniedView: View {
-    let backgroundColor = Color(red: 34/255, green: 141/255, blue: 138/255)
+    let backgroundColor = Constants.accentColor
     var body: some View {
         ZStack{
             VStack {
