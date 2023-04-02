@@ -11,10 +11,29 @@ struct OnboardingView: View {
     @EnvironmentObject var model: ContentModel
     var body: some View {
         VStack{
-            Text("We need your location man")
-                .onAppear {
-                    model.requestGeoLocationPermission()
+            Spacer()
+            Image("appstore")
+                .resizable()
+                .aspectRatio(CGSize(width: 1920, height: 1080), contentMode: .fill)
+                .frame(width: 200, height: 200)
+                .padding()
+            Spacer()
+            Text("We need your location to continue")
+            Button {
+                model.requestGeoLocationPermission()
+            } label: {
+                ZStack{
+                    Rectangle()
+                        .foregroundColor(.blue)
+                        .cornerRadius(10)
+                        .frame(height: 48)
+                        .padding()
+                    Text("Request location")
+                        .foregroundColor(.white)
+                        .bold()
                 }
+            }
+
         }
     }
 }

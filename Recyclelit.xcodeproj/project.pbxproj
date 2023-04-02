@@ -36,7 +36,6 @@
 		FA1C092429D7F25800143057 /* PickupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupData.swift; sourceTree = "<group>"; };
 		FA1C092729D7F66F00143057 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		FA1C092A29D7F7D400143057 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		FA1C092C29D7FA1100143057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FA1C092D29D7FA6F00143057 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		FA1C092F29D7FAA900143057 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		FA1C093129D7FACF00143057 /* LocationDeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDeniedView.swift; sourceTree = "<group>"; };
@@ -78,9 +77,7 @@
 		FA1C090F29D7F1C600143057 /* Recyclelit */ = {
 			isa = PBXGroup;
 			children = (
-				FA1C092C29D7FA1100143057 /* Info.plist */,
 				FA1C092929D7F7AA00143057 /* Constnats */,
-				FA1C092129D7F1E600143057 /* Services */,
 				FA1C092029D7F1E000143057 /* Models */,
 				FA1C091F29D7F1DB00143057 /* Views */,
 				FA1C091E29D7F1D500143057 /* ViewModels */,
@@ -130,13 +127,6 @@
 				FA1C092429D7F25800143057 /* PickupData.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		FA1C092129D7F1E600143057 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		FA1C092629D7F66100143057 /* MapView */ = {

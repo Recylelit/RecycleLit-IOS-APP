@@ -11,6 +11,7 @@ struct PickupData: Decodable, Identifiable {
     var lat: Double
     var long: Double
     var itemName: String
+    var itemType: String
     var itemWeight: String
     var itemSize: String
     var itemNotes:String
