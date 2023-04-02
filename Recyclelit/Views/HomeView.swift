@@ -13,6 +13,7 @@ struct HomeView: View {
     @State var isMapViewActive = false
     @State private var currPickupLocationIndex = 0
     @State var isDetailViewShowing = false
+    
     var body: some View {
         NavigationView {
             VStack{

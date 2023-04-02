@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     @EnvironmentObject var model: ContentModel
+    
     var body: some View {
         VStack{
             Spacer()
