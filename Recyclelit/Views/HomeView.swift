@@ -19,19 +19,7 @@ struct HomeView: View {
             VStack{
                 if !isMapViewActive {
                     VStack {
-                        Button {
-                            isMapViewActive = true
-                        } label: {
-                            ZStack{
-                                Rectangle()
-                                    .cornerRadius(10)
-                                    .frame(height: 48)
-                                    .padding()
-                                Text("Switch to map view")
-                                    .bold()
-                                    .foregroundColor(.white)
-                            }
-                        }
+                        SwitchViewButton(isMapViewActive: $isMapViewActive, text: "Switch to map view", backgroundColor: Constants.accentColor)
                         GeometryReader { geo in
                             TabView(selection: $currPickupLocationIndex) {
                                 if model.locations.count > 0 {
@@ -49,7 +37,6 @@ struct HomeView: View {
                                                             Text(model.locations[index].itemName)
                                                                 .font(.system(size: 24))
                                                             Text("Weight: " + model.locations[index].itemWeight)
-                                                            //                                                            .font(.headline)
                                                         }
                                                         .padding()
                                                         Spacer()
@@ -105,21 +92,7 @@ struct HomeView: View {
                         MapView(selectedLocation: $selectedLocation)
                             .edgesIgnoringSafeArea(.all)
                         VStack{
-                            Button {
-                                isMapViewActive = false
-                            } label: {
-                                ZStack{
-                                    Rectangle()
-                                        .cornerRadius(10)
-                                        .frame(height: 48)
-                                        .padding()
-                                        .foregroundColor(.white)
-                                        .shadow(radius: 10)
-                                    Text("Switch to card view")
-                                        .bold()
-                                        .foregroundColor(.blue)
-                                }
-                            }
+                            SwitchViewButton(isMapViewActive: $isMapViewActive, text: "Switch to card view")
                             Spacer()
                         }
                     }
@@ -133,5 +106,29 @@ struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
             .environmentObject(ContentModel())
+    }
+}
+
+struct SwitchViewButton: View {
+    @Binding var isMapViewActive: Bool
+    var text: String?
+    var backgroundColor: Color?
+    
+    var body: some View {
+        Button {
+            isMapViewActive.toggle()
+        } label: {
+            ZStack{
+                Rectangle()
+                    .cornerRadius(10)
+                    .frame(height: 48)
+                    .padding()
+                    .foregroundColor(backgroundColor ?? .white)
+                Text(text ?? "")
+                    .bold()
+                    .foregroundColor(backgroundColor != nil ? .white : Constants.accentColor )
+            }
+            .shadow(radius: isMapViewActive ? 10 : 0)
+        }
     }
 }

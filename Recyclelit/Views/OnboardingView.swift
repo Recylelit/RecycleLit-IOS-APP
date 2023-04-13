@@ -25,7 +25,7 @@ struct OnboardingView: View {
             } label: {
                 ZStack{
                     Rectangle()
-                        .foregroundColor(.blue)
+                        .foregroundColor(Constants.accentColor)
                         .cornerRadius(10)
                         .frame(height: 48)
                         .padding()
